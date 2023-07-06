@@ -2,9 +2,7 @@ pipeline {
   agent any
   
   environment {
-    AWS_ACCESS_KEY_ID = credentials('AKIATKLCTJCCBYFWK5HU')
-    AWS_SECRET_ACCESS_KEY = credentials('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')
-    AWS_REGION = 'us-east-2'
+    AWS_ACCESS_KEY_ID = credentials
     EC2_INSTANCE_TYPE = 't2.micro'
     GITHUB_REPO = 'https://github.com/surajn17/deploy.git'
     GITHUB_BRANCH = 'main'
