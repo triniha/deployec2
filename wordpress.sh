@@ -29,9 +29,12 @@ else
     echo "Docker Compose is already installed."
 fi
 
+# Create WordPress site
+echo "Creating WordPress site..."
+
 # Create a directory for the site
-mkdir "$site_name"
-cd "$site_name" || exit
+mkdir wordpress-site
+cd wordpress-site || exit
 
 # Create docker-compose.yml file
 cat <<EOF > docker-compose.yml
@@ -70,4 +73,4 @@ EOF
 # Start the containers
 docker-compose up -d
 
-echo "WordPress site has been created. You can access it at http://localhost." 
+echo "WordPress site has been created. You can access it at http://localhost."
